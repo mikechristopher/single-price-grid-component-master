@@ -138,5 +138,36 @@ button:hover {
 .attribution a { color: #000000; }
 
 @media screen and (max-width: 500px) {
+    .container {
+        width: 300px;
+        height: 100vh;
+        padding-bottom: 500px;
+        padding-top: 300px
+    }
+    .card {
+    width: 300px;
+}
+    .cardhead {
+    padding-left: 1.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+    .cardbody {
+    flex-direction: column;
+}
+    .cardsub {
+    width: 100%;
+    border-radius: 0;
+    padding-left: 1.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+    .cardbodydetail {
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    padding-left: 1.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
 
 }
