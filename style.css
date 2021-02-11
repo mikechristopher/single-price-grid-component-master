@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
-
 :root {
     --Cyan: hsl(179, 62%, 43%);
     --LightCyan: hsl(179, 43%, 56%);
@@ -7,19 +6,16 @@
     --Gray: hsl(204, 43%, 93%);
     --GrayBlue: hsl(218, 22%, 67%);
 }
-
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
-
 body {
     font-family: 'Karla', sans-serif;
     font-size: 16px;
     background-color: var(--Gray);
 }
-
 .container {
     height: 95vh;
     display: flex;
@@ -29,56 +25,43 @@ body {
     justify-content: center;
 }
 .card {
-    display: flex;
-    flex-direction: column;
     background-color: #ffffff;
-    width: 635px;
-    height: 480px;
     border-radius: 10px;
     box-shadow: 10px 10px 30px 30px rgba(0,0,0,0.06);
-
-    }
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 635px;
+    height: 480px;
+}
 .cardhead {
-    display: flex;
-    flex-direction: column;
-    padding-left: 2.5rem;
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
-
+    padding: 2.5rem 0 2.5rem 2.5rem;
+    grid-column: 1 / span 2;
 }
 h2.cardtitle {
     color: var(--Cyan);
     padding: 10px 0;
-
 }
 h3.cardsubtitle {
     color: var(--Yellow);
     padding: 10px 0;
-
 }
 .cardhead p {
     color: var(--GrayBlue);
     padding-bottom: 5px;
 }
-
+.cardsub {
+    background-color: var(--Cyan);
+    border-radius: 0 0 0 10px;
+    padding: 3rem 0 3rem 3rem;
+}
+.cardsub p {
+    color: #a2f7f4;
+}
 .cardbody {
-    display: flex;
-    align-items: flex-end;
-    width: 100%;
-    height: 100%;
     color: #ffffff;
 }
 .cardbody p {
     color: #a2f7f4;
-}
-.cardsub {
-    background-color: var(--Cyan);
-    width: 50%;
-    height: 100%;
-    border-radius: 0 0 0 10px;
-    padding-left: 3rem;
-    padding-top: 3rem;
-
 }
 .pricing {
     padding-top: 20px;
@@ -89,14 +72,12 @@ h3.cardsubtitle {
 .pricing h3 {
     display: inline-block;
     min-width: 27%;
-    font-size: 32px;
-
+    font-size: 2rem;
 }
 .pricing p {
     display: inline-block;
     min-width: 70%;
     color: #7ae0e4;
-
 }
 button {
     background-color: var(--Yellow);
@@ -104,23 +85,18 @@ button {
     width: 240px;
     height: 45px;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 0.85rem;
     margin-top: 30px;
     border-radius: 5px;
     border: 1px solid #55b16e; 
 }
 button:hover {
     background-color: #ffc107;
-
 }
-
 .cardbodydetail {
     background-color: var(--LightCyan);
-    width: 50%;
-    height: 100%;
     border-radius: 0 0 10px 0;
     padding: 3rem;
-
 }
 .cardbodydetail h4 {
     padding-bottom: 20px;
@@ -129,14 +105,17 @@ button:hover {
     color: #a2f7f4;
     display: flex;
     padding-bottom: 4px;
-    font-size: 14px;
+    font-size: 0.9rem;
     font-weight: normal;
-
 }
-
-.attribution { font-size: 11px; text-align: center; color: #000000;}
-.attribution a { color: #000000; }
-
+.attribution { 
+    font-size: 0.75rem; 
+    text-align: center; 
+    color: #000000;
+}
+.attribution a { 
+    color: #000000; 
+}
 @media screen and (max-width: 500px) {
     .container {
         width: 300px;
@@ -145,29 +124,22 @@ button:hover {
         padding-top: 300px
     }
     .card {
-    width: 300px;
-}
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+    }
     .cardhead {
-    padding-left: 1.5rem;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-}
-    .cardbody {
-    flex-direction: column;
-}
-    .cardsub {
-    width: 100%;
-    border-radius: 0;
-    padding-left: 1.5rem;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-}
-    .cardbodydetail {
-    width: 100%;
-    border-radius: 0 0 10px 10px;
-    padding-left: 1.5rem;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-}
+        padding: 1.5rem 0 1.5rem 1.5rem;
+    }
 
+    .cardsub {
+        width: 100%;
+        border-radius: 0;
+        padding: 1.5rem 0 1.5rem 1.5rem;
+    }
+    .cardbodydetail {
+        width: 100%;
+        border-radius: 0 0 10px 10px;
+        padding: 1.5rem 0 1.5rem 1.5rem;
+    }
 }
